@@ -54,7 +54,7 @@ def migrate(from_host, from_port, from_username, from_password, from_tls, to_hos
             if to_sieve.setactive(sn) != 'OK':
                 raise Exception(f"Unable to set script {sn} active on {to_host}")
 
-    print(f"Migrated {script_contents.keys()} from {from_host}({from_username}) to {to_host}({to_username})",
+    print(f"Migrated list({script_contents.keys()}) from {from_host}({from_username}) to {to_host}({to_username})",
           file=sys.stderr)
 
 
